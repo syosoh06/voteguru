@@ -17,6 +17,8 @@
         vm.activate = activate;
 
         vm.user = {};
+        vm.showSettingsOrLogout = showSettingsOrLogout;
+        vm.showLoginOrSignup = showLoginOrSignup;
 
         activate();
 
@@ -24,6 +26,14 @@
             console.log("navbar controller activated");
             vm.user = voteGuruService.getUser();
             // just getting user info
+        }
+
+        function showLoginOrSignup() {
+            return voteGuruService.showLoginOrSignup();
+        }
+
+        function showSettingsOrLogout() {
+            return voteGuruService.showSettingsOrLogout();
         }
     }
 

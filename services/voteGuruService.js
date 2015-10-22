@@ -36,7 +36,32 @@
         var showAllPolls;
         var pollForGraphs;
 
+        /*<li><a ui-sref="signup" ng-if="($state.is('usersHomePage'))||($state.is('signup'))||($state.is('login')) ">Sign Up</a></li>
+         <li><a ui-sref="login" ng-if="($state.is('usersHomePage'))||($state.is('signup'))||($state.is('login')) ">Login</a></li>
+         <li><a ui-sref="settingPage" ng-if="($state.is('usersHomePage'))||($state.is('votingPage'))||($state.is('graphPage'))||($state.is('myPollsPage'))">Settings</a></li>
+         <li><a ui-sref="login" ng-if="($state.is('usersHomePage'))||($state.is('votingPage'))||($state.is('graphPage'))||($state.is('myPollsPage'))">Logout</a></li>
+         */
+
+
+
+
         return {
+            showLoginOrSignup: function () {
+                if (toState === 'home' || toState === 'signup' || toState === 'login') {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            },
+            showSettingsOrLogout: function () {
+                if (toState === 'home' || toState === 'signup' || toState === 'login') {
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            },
             loadGraphData: function(){
                 var data = [];
                 var poll = this.getPollForGraphs();
