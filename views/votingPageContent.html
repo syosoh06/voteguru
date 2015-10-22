@@ -1,0 +1,15 @@
+<div class="container" ng-controller="votingPageController as vm">
+    <h2 class="text-center">Vote for {{vm.poll.name}}</h2>
+    <form>
+        <div  ng-repeat="opt in vm.poll.Options">
+            <div class="radio" class="text-center">
+                <label><input type="radio" ng-model="vm.optionSelected" value = "{{opt.option}}" name="optradio">{{opt.option}}</label>
+            </div>
+        </div>
+        <div class="form-group" class="text-center">
+            <button type="button" class="btn btn-success text-center" ng-click="vm.submit()" >Submit</button>
+        </div>
+    </form>
+
+
+</div>

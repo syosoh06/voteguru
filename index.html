@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="plunker">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <!--<script data-require="angular.js@1.4.x" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js" data-semver="1.4.6"></script>
+    -->    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/Chart.js/Chart.js"></script>
+    <script src="bower_components/angular-chart.js/dist/angular-chart.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.0/css/font-awesome.css" />
+    <script data-require="ui-router@*" data-semver="0.2.15" src="//rawgit.com/angular-ui/ui-router/0.2.15/release/angular-ui-router.js"></script>
+
+    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+    <script src="controllers/mainController.js"></script>
+    <script src="controllers/signupController.js"></script>
+    <script src="routes.js"></script>
+    <script src="run.js"></script>
+    <script src="controllers/newPollController.js"></script>
+    <script src="services/voteGuruService.js"></script>
+    <script src="controllers/navbarController.js"></script>
+    <script src="controllers/votingPageController.js"></script>
+    <script src="controllers/midbarController.js"></script>
+    <script src="controllers/settingsPageController.js"></script>
+    <script src="controllers/myPollsPageController.js"></script>
+    <script src="controllers/usersHomePageMidbarController.js"></script>
+
+    <script src="controllers/graphController.js"></script>
+</head>
+
+<body ng-controller="mainController as vm">
+<div ui-view="" name="nav"></div>
+<div ui-view="" name="midbar"></div>
+<div ui-view="" name="content"></div>
+</body>
+
+</html>

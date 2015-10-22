@@ -1,0 +1,18 @@
+<nav class="navbar navbar-inverse" ng-controller="navbarController as vm">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">VoteGuru</a>
+        </div>
+        <div>
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="home">Home</a></li>
+                <li><a ui-sref="signup" ng-if="($state.is('usersHomePage'))||($state.is('signup'))||($state.is('login')) ">Sign Up</a></li>
+                <li><a ui-sref="login" ng-if="($state.is('usersHomePage'))||($state.is('signup'))||($state.is('login')) ">Login</a></li>
+                <li><a ui-sref="settingPage" ng-if="($state.is('usersHomePage'))||($state.is('votingPage'))||($state.is('graphPage'))||($state.is('myPollsPage'))">Settings</a></li>
+                <li><a ui-sref="login" ng-if="($state.is('usersHomePage'))||($state.is('votingPage'))||($state.is('graphPage'))||($state.is('myPollsPage'))">Logout</a></li>
+                <span class="col-sm-4"></span>
+
+            </ul>
+        </div>
+    </div>
+</nav>

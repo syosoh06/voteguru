@@ -1,0 +1,28 @@
+<div class="container" ng-controller="newPollController as vm">
+    <h2 class="text-center">Create New Poll</h2>
+    <div class="text-center">
+        <form role="form">
+            <div class="form-group" >
+                <input placeholder = "Enter poll name" ng-model="vm.selectedPoll.name"/>
+            </div>
+            <div ng-repeat="opt in vm.selectedPoll.Options track by $index">
+                <div class="form-group" >
+                    <input placeholder = "Enter options" ng-model="opt.option"/>
+                    <button type="button" class="btn btn-danger" ng-click="vm.deleteOption($index)">
+                        Delete
+                    </button>
+                </div>
+            </div>
+<!--<pre>vm.selectedPoll -- {{vm.selectedPoll | json}}</pre>-->
+
+            <div class="form-group">
+                <button type="button" ng-click="vm.addMoreOptions()" class="btn btn-success text-center">More options</button>
+            </div>
+            <div class="form-group" >
+                <button type="button" class="btn btn-success text-center" ng-click="vm.submit()" >Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+</div>
