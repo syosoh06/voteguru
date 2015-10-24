@@ -30,7 +30,7 @@
         }
 
         function viewResults(poll){
-            voteGuruService.getSinglePoll(poll).success(function(data){
+            voteGuruService.getSinglePoll(poll._id, poll).success(function (data) {
                 voteGuruService.setPollForGraphs(data);
                 $state.go('graphPage');
             })

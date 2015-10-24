@@ -37,7 +37,13 @@
         var pollForGraphs;
 
 
+
         return {
+            setNewPollFlagIfEnteringHomePage: function () {
+                if (((this.getFromState() === 'login') || (this.getFromState() === 'signup')) && (this.getToState() === 'usersHomePage')) {
+                    this.setNewPollFlag(true);
+                }
+            },
             showLoginOrSignup: function () {
                 if (toState === 'home' || toState === 'signup' || toState === 'login') {
                     return true;
@@ -175,58 +181,7 @@
 
             getPollToBeRetrievedInNewPollsPage: function(){
                 return oldPoll;
-            }/*,
-
-            updateUserInfoBeforeSubmitting: function(userInfo , selectedPoll){
-                this.deletePoll( this.getOldPoll(), userInfo.polls);
-                userInfo.polls.push(selectedPoll);
-                userInfo.toBeEdited = false;
-                userInfo.pollNameToBeEdited = "";
-                return userInfo;
             },
-
-            setSelectedPollForEditing: function(name, user){
-                var len = user.polls.length;
-                var index;
-                for(var i=0; i<len; i++){
-                    if(user.polls[i].name === name)
-                    {
-                        index=i;
-                        break;
-                    }
-                }
-                return user.polls[index];
-             },*/
-            /*
-            addEditPollNameAndSetEditFieldToTrue: function(pollObj, user){
-                user.pollNameToBeEdited = pollObj.name;
-                user.toBeEdited = true;
-                return user;
-             },*/
-
-            /*deletePoll: function(pollObj, arrayOfPolls){
-                if(arrayOfPolls){
-                    var indexToBeDeleted, temp;
-                    var len = arrayOfPolls.length;
-                    for(var i=0; i<len; i++){
-                        if(arrayOfPolls[i].name === pollObj.name){
-                            indexToBeDeleted = i;
-                            break;
-                        }
-                    }
-                    if((len-1)!==indexToBeDeleted){
-                        temp = arrayOfPolls[len-1];
-                        arrayOfPolls[len-1]=arrayOfPolls[indexToBeDeleted];
-                        arrayOfPolls[indexToBeDeleted]=temp;
-                        arrayOfPolls.pop();
-                    }
-                    else{
-                        arrayOfPolls.pop();
-                    }
-
-                }
-                return arrayOfPolls;
-             },*/,
 
             getUser: function(){
                 return user;
@@ -255,15 +210,7 @@
 
                 }
             return validation;
-            }/*,
-
-            setUsers: function(usersArray){
-                users = usersArray;
             },
-
-            getUsers: function(){
-                return users;
-             }*/,
 
             createPolls: function(){
 
@@ -285,13 +232,6 @@
                 return selectedPollObj;
             },
 
-            /*copySelectedPoll : function(selectedPoll, pollsArray){
-                if(pollsArray) {
-                pollsArray.push(selectedPoll);
-                }
-                return pollsArray;
-             },*/
-
             setPollForVotingPage: function(selectedPoll){
                 pollForVotingPage = selectedPoll;
             },
@@ -309,17 +249,6 @@
                 }
                 return poll;
             },
-
-            /*updateUserWithPollVotes: function(poll, user){
-                var len = user.polls.length;
-                for(var i =0; i<len; i++){
-                    if(user.polls[i].name === poll.name){
-                        user.polls[i]=poll;
-                        break;
-                    }
-                }
-                return user;
-             },*/
 
             getSingleUser: function(id, userdata){
                 var url = ('http://localhost:8080/api/users/'+id).toString();
