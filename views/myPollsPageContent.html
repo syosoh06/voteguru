@@ -1,9 +1,34 @@
 <div ng-controller="myPollsPageController as vm" class="text-center">
-    <ul ng-repeat="pollObj in vm.polls">
-        <li class="list-group-item">{{pollObj.name}}
-            <button class="btn btn-primary" ng-click="vm.deletePoll(pollObj)" ng-hide="vm.hideDeleteButton(pollObj)">Delete</button>
-            <button class="btn btn-primary" ng-click="vm.editPoll(pollObj)">Edit</button>
-        <button class="btn btn-primary" ng-click="vm.vote(pollObj)">Vote</button>
-        <button class="btn btn-primary" ng-click="vm.viewResults(pollObj)">View Results</button> </li>
+    <ul ng-repeat="pollObj in vm.polls" class="list-group">
+        <li>
+            <div class="row">
+                <div class="col-sm-4">
+                    <button type="button" class="btn btn-info">
+                        {{pollObj.name}}
+                    </button>
+                </div>
+
+                <div class="col-sm-2">
+                    <button class="btn btn-danger" ng-click="vm.deletePoll(pollObj)"
+                            ng-hide="vm.hideDeleteButton(pollObj)">Delete
+                    </button>
+                </div>
+
+                <div class="col-sm-2">
+                    <button class="btn btn-primary" ng-click="vm.editPoll(pollObj)">Edit</button>
+                </div>
+
+                <div class="col-sm-2">
+                    <button class="btn btn-primary" ng-click="vm.vote(pollObj)">Vote</button>
+                </div>
+
+                <div class="col-sm-2">
+                    <button class="btn btn-primary" ng-click="vm.viewResults(pollObj)">View Results</button>
+                </div>
+            </div>
+
+        </li>
+
+
     </ul>
 </div>
