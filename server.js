@@ -95,7 +95,10 @@ router.route('/polls/:poll_id')
             if(err)
                 res.send(err);
 
-            poll.name=req.body.name;
+
+            poll.name = req.body.name;
+
+
             poll.Options = req.body.Options;
             poll.username = req.body.username;
 

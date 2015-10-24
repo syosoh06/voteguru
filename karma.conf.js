@@ -19,7 +19,13 @@ module.exports = function(config) {
         'bower_components/angular/angular.js',
         'bower_components/angular-mocks/angular-mocks.js',
         'bower_components/angular-resource/angular-resource.js',
+        'bower_components/angular-ui-router/release/angular-ui-router.min.js',
+        'bower_components/Chart.js/Chart.js',
+        'bower_components/angular-chart.js/dist/angular-chart.js',
+        'app.js',
       'test/test.js',
+        'test/serviceTests.js',
+        'services/*.js',
         '*.js'
     ],
 

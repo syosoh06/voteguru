@@ -23,7 +23,7 @@
             //voteGuruService.updateUserWithPollVotes(vm.poll, vm.user);
             voteGuruService.updatePoll(vm.poll._id, vm.poll).success(function(data){
 
-                voteGuruService.getSinglePoll(vm.poll).success(function(data){
+                voteGuruService.getSinglePoll(vm.poll._id, vm.poll).success(function (data) {
                     vm.optionSelected = "";
                     voteGuruService.setPollForGraphs(data);
                     $state.go('graphPage');
