@@ -9,7 +9,7 @@
         .controller('mainController', mainController);
 
 
-    function mainController($scope, $http, $state, $rootScope, voteGuruService) {
+    function mainController($rootScope, voteGuruService) {
 
 
         var vm = this;

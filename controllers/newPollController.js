@@ -9,7 +9,7 @@
         .controller('newPollController', newPollController);
 
 
-    function newPollController($scope, $http, $state, voteGuruService, $rootScope) {
+    function newPollController($state, voteGuruService, $rootScope) {
 
 
         var vm = this;

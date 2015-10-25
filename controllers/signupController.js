@@ -6,7 +6,7 @@
         .controller('signupController', signupController);
 
 
-    function signupController($scope, $http, $state, voteGuruService) {
+    function signupController($state, voteGuruService) {
 
 
         var vm = this;
@@ -15,6 +15,7 @@
         vm.login=login;
         vm.signup = signup;
         vm.userFormData = {};
+        vm.closeErrorMessage = closeErrorMessage;
 
         activate();
 
@@ -23,13 +24,24 @@
             vm.errorMessage = "";
         }
 
+        function closeErrorMessage() {
+            vm.errorMessage = "";
+        }
+
         function login(){
-            voteGuruService.get().success(function(data){
-                console.log('list of users', data);
-                var validation = voteGuruService.validate(vm.userFormData, data);
-                //voteGuruService.setUser(data.user);
-                changeState(validation);
-            })
+
+            if (voteGuruService.validateForm(vm.loginOrSignupForm) === true) {
+                voteGuruService.get().success(function (data) {
+                    console.log('list of users', data);
+                    var validation = voteGuruService.validate(vm.userFormData, data);
+                    //voteGuruService.setUser(data.user);
+                    changeState(validation);
+                })
+            }
+            else {
+                vm.errorMessage = voteGuruService.getErrorMessage();
+            }
+
         }
 
         function changeState(val){
@@ -44,14 +56,37 @@
         }
 
         function signup(){
-            vm.errorMessage = "";
-            voteGuruService.create(vm.userFormData).success(function(data){
+
+            if (voteGuruService.validateForm(vm.loginOrSignupForm) === true) {
+                checkUserName();
+            }
+            else {
+                vm.errorMessage = voteGuruService.getErrorMessage();
+            }
+
+        }
+
+        function checkUserName() {
+            voteGuruService.get().success(function (data) {
+                console.log('list of users', data);
+                var usernameExists = voteGuruService.checkIfUsernameExists(vm.userFormData, data);
+                if (usernameExists === true) {
+                    vm.errorMessage = voteGuruService.getErrorMessage();
+                }
+                else {
+                    addUser();
+                }
+            });
+
+        }
+
+        function addUser() {
+            voteGuruService.create(vm.userFormData).success(function (data) {
                 vm.userFormData = {};
                 voteGuruService.setNewPollFlag(true);
                 voteGuruService.setUser(data.userCreated);
                 $state.go('usersHomePage');
             });
-
         }
 
     }

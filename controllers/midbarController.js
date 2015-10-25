@@ -9,7 +9,7 @@
         .controller('midbarController', midbarController);
 
 
-    function midbarController($scope, $http, $state, voteGuruService) {
+    function midbarController($state) {
 
 
         var vm = this;

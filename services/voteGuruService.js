@@ -35,10 +35,37 @@
         var toState, fromState;
         var showAllPolls;
         var pollForGraphs;
+        var errorMessage = "";
 
 
 
         return {
+            checkIfUsernameExists: function (userFormData, data) {
+                var len = data.length;
+                for (var i = 0; i < len; i++) {
+                    if (data[i].username === userFormData.username) {
+                        this.setErrorMessage("Username already exists - Please choose a different name");
+                        return true;
+                    }
+                }
+                return false;
+            },
+            setErrorMessage: function (message) {
+                errorMessage = message;
+            },
+            getErrorMessage: function () {
+                return errorMessage;
+            },
+            validateForm: function (form) {
+                if (form.$invalid) {
+
+                    this.setErrorMessage("Please enter your details in order to proceed");
+                    return false;
+                }
+                else {
+                    return true;
+                }
+            },
             loadBarDataForGraphs: function (data, labels) {
                 var barData = {};
                 barData.labels = labels;
@@ -219,7 +246,7 @@
                 var len = data.length;
                 var validation = false;
                 for(var i=0; i<len; i++){
-                    if(data[i].username === formData.username && data[i].password === formData.username){
+                    if (data[i].username === formData.username && data[i].password === formData.password) {
                         validation = true;
                         this.setUser(data[i]);
                     }

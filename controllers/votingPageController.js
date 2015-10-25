@@ -9,7 +9,7 @@
         .controller('votingPageController', votingPageController);
 
 
-    function votingPageController($scope, $http, $state, voteGuruService) {
+    function votingPageController($state, voteGuruService) {
 
 
         var vm = this;

@@ -12,7 +12,7 @@
         .controller('graphController', graphController);
 
 
-    function graphController($scope, $http, $state, $rootScope, voteGuruService) {
+    function graphController(voteGuruService) {
 
 
         var vm = this;

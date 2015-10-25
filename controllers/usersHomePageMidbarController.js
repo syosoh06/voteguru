@@ -9,7 +9,7 @@
         .controller('usersHomePageMidbarController', usersHomePageMidbarController);
 
 
-    function usersHomePageMidbarController($scope, $http, $state, voteGuruService, $rootScope) {
+    function usersHomePageMidbarController($state, voteGuruService, $rootScope) {
 
 
         var vm = this;

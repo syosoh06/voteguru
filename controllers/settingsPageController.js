@@ -9,7 +9,7 @@
         .controller('settingsPageController', settingsPageController);
 
 
-    function settingsPageController($scope, $http, $state, voteGuruService) {
+    function settingsPageController($state, voteGuruService) {
 
 
         var vm = this;

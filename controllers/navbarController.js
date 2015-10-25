@@ -9,7 +9,7 @@
         .controller('navbarController', navbarController);
 
 
-    function navbarController($scope, $http, $state, voteGuruService) {
+    function navbarController(voteGuruService) {
 
 
         var vm = this;
