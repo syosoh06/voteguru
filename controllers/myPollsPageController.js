@@ -66,7 +66,7 @@
 
         function deletePoll(pollObj){
             voteGuruService.deletePoll(pollObj).success(function(data){
-                getOnlyMyPolls();
+                activate();
             })
         }
 

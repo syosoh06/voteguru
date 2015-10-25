@@ -8,7 +8,8 @@
     "karma-jasmine": "^0.3.6",
     "method-override": "~2.0.2",
     "mongoose": "~3.6.13",
-    "morgan": "~1.5.0"
+    "morgan": "~1.5.0",
+    "path": "^0.12.7"
   },
   "devDependencies": {
     "karma-chrome-launcher": "^0.2.1",

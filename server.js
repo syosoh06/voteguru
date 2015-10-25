@@ -19,6 +19,7 @@ var User = require('./models/users');
 var Poll = require('./models/polls');
 //console.log('User = ', User);
 var morgan = require('morgan');
+var path = require('path');
 
 // configuration ===========================================
 
@@ -40,6 +41,7 @@ app.use(function(req, res, next) {
 // log all requests to the console
 app.use(morgan('dev'));
 
+app.use(express.static(__dirname + '/'));
 
 var port = process.env.PORT || 8080;
 
@@ -186,10 +188,18 @@ router.route('/users/:user_id')
 
 
 router.get('/', function(req, res) {
+    //res.render('index');
+    //res.sendFile('views/index.html');
+    //res.sendFile(path.join(__dirname+'views/index.html'));
     res.json({message: 'this is the backend for our voteguru application'});
 });
 
 app.use('/api', router);
+
+app.get('*', function (req, res) {
+    res.sendfile(path.join(__dirname + '/index.html'));
+});
+
 
 app.listen(port);
 
