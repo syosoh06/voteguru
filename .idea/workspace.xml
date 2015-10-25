@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9f76c8e-3042-4c5f-b923-29d0ea56f793" name="Default" comment="1)added tests&#10;2)updated voting page controller because, while going from voting page to graph page the graph was not coming up properly&#10;3) had to update voteguruservice as well&#10;4) updated the html view - chart centering">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/myPollsPageContent.html" afterPath="$PROJECT_DIR$/views/myPollsPageContent.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/newPollContent.html" afterPath="$PROJECT_DIR$/views/newPollContent.html" />
+    <list default="true" id="e9f76c8e-3042-4c5f-b923-29d0ea56f793" name="Default" comment="changed the html bootstrp for voting page and for new poll page and my polls page">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/graphController.js" afterPath="$PROJECT_DIR$/controllers/graphController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/navbar.html" afterPath="$PROJECT_DIR$/views/navbar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/navbarController.js" afterPath="$PROJECT_DIR$/controllers/navbarController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/services/voteGuruService.js" afterPath="$PROJECT_DIR$/services/voteGuruService.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="voteguru.iws" />
@@ -41,11 +43,31 @@
       <file leaf-file-name="voteGuruService.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/services/voteGuruService.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="4095">
-              <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="711" max-vertical-offset="4335">
+              <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbarController.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/controllers/navbarController.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="825">
+              <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.7434402" vertical-offset="0" max-vertical-offset="345">
+              <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -62,10 +84,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="serviceTests.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="serviceTests.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/test/serviceTests.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.64689267" vertical-offset="2561" max-vertical-offset="3165">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2561" max-vertical-offset="3165">
               <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
               <folding />
             </state>
@@ -85,7 +107,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/js/controllers/mainController.js" />
         <option value="$PROJECT_DIR$/public/js/run.js" />
         <option value="$PROJECT_DIR$/public/js/routes.js" />
         <option value="$PROJECT_DIR$/public/views/index.html" />
@@ -121,8 +142,6 @@
         <option value="$PROJECT_DIR$/login.html" />
         <option value="$PROJECT_DIR$/newPollContent.html" />
         <option value="$PROJECT_DIR$/routes.js" />
-        <option value="$PROJECT_DIR$/controllers/navbarController.js" />
-        <option value="$PROJECT_DIR$/views/navbar.html" />
         <option value="$PROJECT_DIR$/directives/dirtyCheckDirective.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/karma.conf.js" />
@@ -130,12 +149,15 @@
         <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/test/serviceTests.js" />
         <option value="$PROJECT_DIR$/controllers/myPollsPageController.js" />
-        <option value="$PROJECT_DIR$/services/voteGuruService.js" />
         <option value="$PROJECT_DIR$/controllers/newPollController.js" />
         <option value="$PROJECT_DIR$/views/votingPageContent.html" />
         <option value="$PROJECT_DIR$/views/graphPageContent.html" />
         <option value="$PROJECT_DIR$/views/myPollsPageContent.html" />
         <option value="$PROJECT_DIR$/views/newPollContent.html" />
+        <option value="$PROJECT_DIR$/controllers/graphController.js" />
+        <option value="$PROJECT_DIR$/services/voteGuruService.js" />
+        <option value="$PROJECT_DIR$/controllers/navbarController.js" />
+        <option value="$PROJECT_DIR$/views/navbar.html" />
       </list>
     </option>
   </component>
@@ -143,8 +165,8 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="30" />
-    <option name="y" value="23" />
+    <option name="x" value="44" />
+    <option name="y" value="25" />
     <option name="width" value="1168" />
     <option name="height" value="729" />
   </component>
@@ -257,20 +279,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="directives" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voteguru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voteguru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="bower_components" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -397,7 +405,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445701578757</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="changed the html bootstrp for voting page and for new poll page and my polls page">
+      <created>1445704952482</created>
+      <option name="number" value="00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1445704952482</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -421,10 +435,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="30" y="23" width="1168" height="729" extended-state="0" />
+    <frame x="44" y="25" width="1168" height="729" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4913658" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.1978022" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.45426357" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32766616" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -483,7 +497,8 @@
     <MESSAGE value="changed navbar views based on states;&#10;added 2 functions to the voteguru service&#10;" />
     <MESSAGE value="1)added tests&#10;2)updated voting page controller because, while going from voting page to graph page the graph was not coming up properly&#10;3) had to update voteguruservice as well" />
     <MESSAGE value="1)added tests&#10;2)updated voting page controller because, while going from voting page to graph page the graph was not coming up properly&#10;3) had to update voteguruservice as well&#10;4) updated the html view - chart centering" />
-    <option name="LAST_COMMIT_MESSAGE" value="1)added tests&#10;2)updated voting page controller because, while going from voting page to graph page the graph was not coming up properly&#10;3) had to update voteguruservice as well&#10;4) updated the html view - chart centering" />
+    <MESSAGE value="changed the html bootstrp for voting page and for new poll page and my polls page" />
+    <option name="LAST_COMMIT_MESSAGE" value="changed the html bootstrp for voting page and for new poll page and my polls page" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -625,22 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/navbarController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="185" max-vertical-offset="750">
-          <caret line="25" column="55" selection-start-line="25" selection-start-column="55" selection-end-line="25" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/navbar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.625" vertical-offset="0" max-vertical-offset="345">
-          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="407">
@@ -738,16 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/services/voteGuruService.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="397" max-vertical-offset="4095">
-          <caret line="34" column="31" selection-start-line="34" selection-start-column="31" selection-end-line="34" selection-end-column="31" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/votingPageController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.2" vertical-offset="0" max-vertical-offset="855">
@@ -802,16 +791,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.72727275" vertical-offset="0" max-vertical-offset="585">
           <caret line="16" column="37" selection-start-line="16" selection-start-column="37" selection-end-line="16" selection-end-column="37" />
-          <folding>
-            <element signature="n#style#0;n#h2#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/serviceTests.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.64689267" vertical-offset="2561" max-vertical-offset="3165">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2561" max-vertical-offset="3165">
           <caret line="186" column="0" selection-start-line="186" selection-start-column="0" selection-end-line="186" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/graphController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83651227" vertical-offset="398" max-vertical-offset="825">
+          <caret line="47" column="0" selection-start-line="47" selection-start-column="0" selection-end-line="47" selection-end-column="0" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/services/voteGuruService.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="711" max-vertical-offset="4335">
+          <caret line="65" column="17" selection-start-line="65" selection-start-column="17" selection-end-line="65" selection-end-column="17" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/navbarController.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="458" max-vertical-offset="825">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7434402" vertical-offset="0" max-vertical-offset="345">
+          <caret line="17" column="6" selection-start-line="17" selection-start-column="6" selection-end-line="17" selection-end-column="6" />
           <folding />
         </state>
       </provider>

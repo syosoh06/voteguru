@@ -39,13 +39,29 @@
 
 
         return {
+            loadBarDataForGraphs: function (data, labels) {
+                var barData = {};
+                barData.labels = labels;
+                barData.datasets = [];
+                barData.datasets[0] = {};
+                barData.datasets[0].data = data;
+                return barData;
+            },
             setNewPollFlagIfEnteringHomePage: function () {
                 if (((this.getFromState() === 'login') || (this.getFromState() === 'signup')) && (this.getToState() === 'usersHomePage')) {
                     this.setNewPollFlag(true);
                 }
             },
-            showLoginOrSignup: function () {
-                if (toState === 'home' || toState === 'signup' || toState === 'login') {
+            showSignup: function () {
+                if (toState === 'home' || toState === 'login') {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            },
+            showLogin: function () {
+                if (toState === 'home' || toState === 'signup') {
                     return true;
                 }
                 else {

@@ -6,8 +6,8 @@
         <div>
             <ul class="nav navbar-nav">
                 <li><a ui-sref="home">Home</a></li>
-                <li><a ui-sref="signup" ng-if="vm.showLoginOrSignup() ">Sign Up</a></li>
-                <li><a ui-sref="login" ng-if="vm.showLoginOrSignup() ">Login</a></li>
+                <li><a ui-sref="signup" ng-if="vm.showSignup() ">Sign Up</a></li>
+                <li><a ui-sref="login" ng-if="vm.showLogin() ">Login</a></li>
                 <li><a ui-sref="settingPage" ng-if="vm.showSettingsOrLogout()">Settings</a></li>
                 <li><a ui-sref="login" ng-if="vm.showSettingsOrLogout()">Logout</a></li>
                 <span class="col-sm-4"></span>

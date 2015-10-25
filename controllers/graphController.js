@@ -29,17 +29,12 @@
 
         function loadGraph(){
             vm.data=voteGuruService.loadGraphData();
-            console.log('data = ', vm.data);
+            //console.log('data = ', vm.data);
             vm.labels=voteGuruService.loadGraphLabels();
-            console.log('labels = ', vm.labels);
-            var barData = {};
-            barData.labels=vm.labels;
-            barData.datasets=[];
-            barData.datasets[0]={};
-            barData.datasets[0].data=vm.data;
+            //console.log('labels = ', vm.labels);
+            var barData = voteGuruService.loadBarDataForGraphs(vm.data, vm.labels);
             var context = document.getElementById('clients').getContext('2d');
-            //context.canvas.width = 300;
-            //context.canvas.height = 300;
+
             var clientsChart = new Chart(context).Bar(barData);
         }
 

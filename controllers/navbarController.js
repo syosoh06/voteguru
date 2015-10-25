@@ -18,7 +18,8 @@
 
         vm.user = {};
         vm.showSettingsOrLogout = showSettingsOrLogout;
-        vm.showLoginOrSignup = showLoginOrSignup;
+        vm.showLogin = showLogin;
+        vm.showSignup = showSignup;
 
         activate();
 
@@ -28,8 +29,12 @@
             // just getting user info
         }
 
-        function showLoginOrSignup() {
-            return voteGuruService.showLoginOrSignup();
+        function showLogin() {
+            return voteGuruService.showLogin();
+        }
+
+        function showSignup() {
+            return voteGuruService.showSignup();
         }
 
         function showSettingsOrLogout() {
