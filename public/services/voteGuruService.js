@@ -143,7 +143,7 @@
                 showAllPolls = flag;
             },
             getSinglePoll: function (id, poll) {
-                var url = ('http://localhost:8080/api/polls/' + id).toString();
+                var url = ('//localhost:8080/api/polls/' + id).toString();
                 return $http.get( url, poll);
             },
             setNewPollFlag: function(flag){
@@ -154,13 +154,13 @@
             },
 
             deletePoll: function(poll){
-                var url = ('http://localhost:8080/api/polls/'+poll._id).toString();
+                var url = ('//localhost:8080/api/polls/' + poll._id).toString();
                 return $http.delete( url, poll);
             },
 
 
             getAllPolls: function(){
-                return $http.get('http://localhost:8080/api/polls');
+                return $http.get('//localhost:8080/api/polls');
             },
 
             getMyPolls: function( data, username){
@@ -198,11 +198,11 @@
                 return fromState;
             },
             updatePoll: function(id, poll){
-                var url = ('http://localhost:8080/api/polls/'+id).toString();
+                var url = ('//localhost:8080/api/polls/' + id).toString();
                 return $http.put( url, poll);
             },
             addPoll: function(poll){
-                return $http.post('http://localhost:8080/api/polls', poll);
+                return $http.post('//localhost:8080/api/polls', poll);
             },
 
             deleteOption: function(arrayOfOptions, index){
@@ -235,11 +235,11 @@
             },
 
             get: function(){
-                return $http.get('http://localhost:8080/api/users');
+                return $http.get('//localhost:8080/api/users');
             },
 
             create: function(formData){
-                return $http.post('http://localhost:8080/api/users', formData);
+                return $http.post('//localhost:8080/api/users', formData);
             },
 
             validate: function(formData, data){
@@ -266,7 +266,7 @@
             },
 
             update: function(id, userData){
-                var url = ('http://localhost:8080/api/users/'+id).toString();
+                var url = ('//localhost:8080/api/users/' + id).toString();
                 return $http.put( url, userData);
             },
 
@@ -294,7 +294,7 @@
             },
 
             getSingleUser: function(id, userdata){
-                var url = ('http://localhost:8080/api/users/'+id).toString();
+                var url = ('//localhost:8080/api/users/' + id).toString();
                 return $http.get(url, userdata);
             }
         }
