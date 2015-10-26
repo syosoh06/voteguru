@@ -8,8 +8,14 @@
 
 var mongoose   = require('mongoose');
 //console.log('mongoose = ', mongoose);
-mongoose.connect('mongodb://localhost/voteguru'); // connect to our database
-
+//mongoose.connect('mongodb://localhost/voteguru'); // connect to our database
+mongoose.connect('mongodb://bebo:bebo@ds045464.mongolab.com:45464/heroku_17swn89w', function(err) {
+    if (err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});
 
 var express = require('express');
 var app = express();

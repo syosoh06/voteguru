@@ -1,18 +1,21 @@
 {
   "name": "voteguru",
   "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
   "dependencies": {
-    "body-parser": "~1.0.1",
-    "express": "~4.0.0",
-    "karma": "^0.13.11",
-    "karma-jasmine": "^0.3.6",
-    "method-override": "~2.0.2",
-    "mongoose": "~3.6.13",
-    "morgan": "~1.5.0",
-    "path": "^0.12.7"
+    "body-parser": "latest",
+    "express": "latest",
+    "karma": "latest",
+    "karma-jasmine": "latest",
+    "method-override": "latest",
+    "mongoose": "latest",
+    "morgan": "latest",
+    "path": "latest"
   },
   "devDependencies": {
-    "karma-chrome-launcher": "^0.2.1",
-    "requirejs": "^2.1.20"
+    "karma-chrome-launcher": "latest",
+    "requirejs": "latest"
   }
 }
