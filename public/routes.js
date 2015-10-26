@@ -1,12 +1,12 @@
 angular
     .module('plunker')
-    .config(function($stateProvider, $urlRouterProvider){
+    .config(function ($stateProvider, $urlRouterProvider, $locationProvider) {
 
-        $urlRouterProvider.otherwise('/home');
+        $urlRouterProvider.otherwise('/');
 
         $stateProvider
             .state('home', {
-                url:'/home',
+                url: '/',
                 views: {
                     nav: {
                         templateUrl: 'views/navbar.html'
@@ -115,5 +115,7 @@ angular
                     }
                 }
             });
+        // use the HTML5 History API
+        $locationProvider.html5Mode(true);
 
     });
