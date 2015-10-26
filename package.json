@@ -17,5 +17,8 @@
   "devDependencies": {
     "karma-chrome-launcher": "latest",
     "requirejs": "latest"
+  },
+  "engines": {
+    "node": "latest"
   }
 }
