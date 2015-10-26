@@ -8,7 +8,7 @@
 
 var mongoose   = require('mongoose');
 //console.log('mongoose = ', mongoose);
-//mongoose.connect('mongodb://localhost/voteguru'); // connect to our database
+
 
 
 var express = require('express');
@@ -42,13 +42,21 @@ app.use(function(req, res, next) {
 // log all requests to the console
 app.use(morgan('dev'));
 
-mongoose.connect(config.database, function(err) {
+mongoose.connect('mongodb://localhost/voteguru', function(err) {
     if (err) {
         console.log('connection error', err);
     } else {
         console.log('connection successful');
     }
-});
+}); // connect to our local database
+
+/*mongoose.connect(config.database, function(err) {
+    if (err) {
+        console.log('connection error', err);
+    } else {
+        console.log('connection successful');
+    }
+});*/
 
 app.use(express.static(__dirname + '/public'));
 

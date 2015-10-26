@@ -1,7 +1,0 @@
-<div ng-controller="myPollsPageController as vm" class="text-center">
-    <ul ng-repeat="pollObj in vm.polls">
-        <li class="list-group-item">{{pollObj.name}}
-            <button class="btn btn-primary" ng-click="vm.deletePoll(pollObj)">Delete</button>
-            <button class="btn btn-primary" ng-click="vm.editPoll(pollObj)">Edit</button> </li>
-    </ul>
-</div>

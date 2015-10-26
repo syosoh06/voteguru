@@ -23,10 +23,34 @@
         vm.vote = vote;
         vm.viewResults=viewResults;
 
-        function vote(poll){
+        vm.voteAgain = voteAgain;
+        vm.closeDuplicateVoteModal=closeDuplicateVoteModal;
+
+        function voteAgain(){
+           var poll = voteGuruService.editAlreadyVotedArray(vm.pollToBeVoted, vm.user.username);
+            //vote(poll);
+            goToVotingPage(poll);
+            closeDuplicateVoteModal();
+        }
+
+        function closeDuplicateVoteModal(){
+           vm.displayModalFlag = false;
+        }
+
+
+        function goToVotingPage(poll){
             voteGuruService.setPollForVotingPage(poll);
             voteGuruService.setPollToBeRetrievedInNewPollsPage({});
             $state.go('votingPage');
+        }
+
+        function vote(poll){
+            vm.pollToBeVoted = poll;
+             vm.displayModalFlag = voteGuruService.checkIfAlreadyVoted(vm.user, poll);
+            if(vm.displayModalFlag === false){
+                goToVotingPage(poll);
+            }
+
         }
 
         function viewResults(poll){
@@ -72,7 +96,7 @@
 
         function editPoll(pollObj){
             voteGuruService.setNewPollFlag(false);
-            voteGuruService.getSinglePoll(pollObj).success(function(data){
+            voteGuruService.getSinglePoll(pollObj._id, pollObj).success(function(data){
                 voteGuruService.setPollToBeRetrievedInNewPollsPage(data);
                 $state.go('usersHomePage');
             })
@@ -81,6 +105,8 @@
 
         function activate(){
             console.log("my polls page controller activated");
+            vm.user = voteGuruService.getUser();
+            vm.displayModalFlag = false;
             if(voteGuruService.getshowAllPollsFlag() === true){
                 showAllPolls();
             }

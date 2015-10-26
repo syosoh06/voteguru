@@ -21,6 +21,7 @@ module.exports = function(app, express) {
             poll.name = req.body.name;
             poll.Options = req.body.Options;
             poll.username = req.body.username;
+            poll.alreadyVoted = req.body.alreadyVoted;
 
             console.log(poll);
             poll.save(function (err) {
@@ -63,6 +64,7 @@ module.exports = function(app, express) {
 
                 poll.Options = req.body.Options;
                 poll.username = req.body.username;
+                poll.alreadyVoted = req.body.alreadyVoted;
 
                 poll.save(function (err) {
                     if (err)

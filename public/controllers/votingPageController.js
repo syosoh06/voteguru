@@ -19,7 +19,7 @@
         vm.submit = submit;
 
         function submit(){
-            voteGuruService.submitPolls(vm.optionSelected, vm.poll );
+            voteGuruService.submitPolls(vm.optionSelected, vm.poll , vm.user);
             //voteGuruService.updateUserWithPollVotes(vm.poll, vm.user);
             voteGuruService.updatePoll(vm.poll._id, vm.poll).success(function(data){
 
@@ -36,7 +36,7 @@
 
         function activate(){
             console.log("voting page controller activated");
-            //vm.user = voteGuruService.getUser();
+            vm.user = voteGuruService.getUser();
             vm.poll = voteGuruService.getPollForVotingPage();
             // this just is a poll object containing the options and name
         }
