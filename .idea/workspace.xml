@@ -1,10 +1,112 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="e9f76c8e-3042-4c5f-b923-29d0ea56f793" name="Default" comment="refactored controllers&#10;add sign up form validation">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/controllers/myPollsPageController.js" afterPath="$PROJECT_DIR$/controllers/myPollsPageController.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+    <list default="true" id="e9f76c8e-3042-4c5f-b923-29d0ea56f793" name="Default" comment="chnged backend a lil bit">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/.travis.yml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/Chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/Chart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/LICENSE.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/00-Getting-Started.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/01-Line-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/02-Bar-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/03-Radar-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/04-Polar-Area-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/05-Pie-Doughnut-Chart.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/06-Advanced.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/docs/07-Notes.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/bar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/doughnut.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/line-customTooltips.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/line.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/pie-customTooltips.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/pie.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/polar-area.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/samples/radar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/src/Chart.Bar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/src/Chart.Core.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/src/Chart.Doughnut.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/src/Chart.Line.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/src/Chart.PolarArea.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/Chart.js/src/Chart.Radar.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/angular-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/angular-chart.less" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/dist/angular-chart.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/dist/angular-chart.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/dist/angular-chart.js.tar.gz" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/dist/angular-chart.min.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/dist/angular-chart.min.css.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/dist/angular-chart.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/dist/angular-chart.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/gulpfile.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-chart.js/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/angular-mocks.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/ngAnimateMock.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/ngMock.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/ngMockE2E.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-mocks/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/angular-resource.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/angular-resource.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/angular-resource.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular-resource/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/.bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/README.md" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/angular-csp.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/angular.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.gzip" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/angular.min.js.map" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/bower.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/index.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/bower_components/angular/package.json" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/graphController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/mainController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/midbarController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/myPollsPageController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/navbarController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/newPollController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/settingsPageController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/signupController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/usersHomePageMidbarController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/controllers/votingPageController.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/directives/dirtyCheckDirective.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/karma.conf.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/routes.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/run.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/services/voteGuruService.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/style.css" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/serviceTests.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/test/test.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/allVotesPageContent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/graphPageContent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/home.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/login.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/midbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/myPollsPageContent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/navbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/newPollContent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/settingsPageContent.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/usersHomePageMidbar.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/views/votingPageContent.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server.js" afterPath="$PROJECT_DIR$/server.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -30,21 +132,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="server.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="server.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3180">
-              <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="myPollsPageController.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/myPollsPageController.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.40785497" vertical-offset="0" max-vertical-offset="1515">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.72507554" vertical-offset="0" max-vertical-offset="3165">
+              <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -112,8 +204,8 @@
         <option value="$PROJECT_DIR$/controllers/votingPageController.js" />
         <option value="$PROJECT_DIR$/services/voteGuruService.js" />
         <option value="$PROJECT_DIR$/index.html" />
-        <option value="$PROJECT_DIR$/server.js" />
         <option value="$PROJECT_DIR$/controllers/myPollsPageController.js" />
+        <option value="$PROJECT_DIR$/server.js" />
       </list>
     </option>
   </component>
@@ -179,20 +271,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="models" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voteguru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="voteguru" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="controllers" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,7 +421,13 @@
       <option name="project" value="LOCAL" />
       <updated>1445797560261</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="chnged backend a lil bit">
+      <created>1445808423364</created>
+      <option name="number" value="00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1445808423364</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TodoView" selected-index="0">
@@ -368,7 +452,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="29" y="64" width="1225" height="689" extended-state="0" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.19674039" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.26426077" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -381,7 +465,7 @@
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32713178" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24891068" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24584718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24584718" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.39865997" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -433,7 +517,8 @@
     <MESSAGE value="changed the html bootstrp for voting page and for new poll page and my polls page" />
     <MESSAGE value="changed login/signup view&#10;changed graph controller and transferred some of that logic to a service" />
     <MESSAGE value="refactored controllers&#10;add sign up form validation" />
-    <option name="LAST_COMMIT_MESSAGE" value="refactored controllers&#10;add sign up form validation" />
+    <MESSAGE value="chnged backend a lil bit" />
+    <option name="LAST_COMMIT_MESSAGE" value="chnged backend a lil bit" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -503,16 +588,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3180">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/myPollsPageController.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.40785497" vertical-offset="0" max-vertical-offset="1515">
-          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.72507554" vertical-offset="0" max-vertical-offset="3165">
+          <caret line="16" column="48" selection-start-line="16" selection-start-column="48" selection-end-line="16" selection-end-column="48" />
           <folding />
         </state>
       </provider>

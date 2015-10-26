@@ -41,7 +41,7 @@ app.use(function(req, res, next) {
 // log all requests to the console
 app.use(morgan('dev'));
 
-app.use(express.static(__dirname + '/'));
+app.use(express.static(__dirname + '/public'));
 
 var port = process.env.PORT || 8080;
 
@@ -197,7 +197,7 @@ router.get('/', function(req, res) {
 app.use('/api', router);
 
 app.get('*', function (req, res) {
-    res.sendfile(path.join(__dirname + '/index.html'));
+    res.sendfile(path.join(__dirname + '/public/index.html'));
 });
 
 
