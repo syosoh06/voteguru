@@ -1,0 +1,13 @@
+<div class="container" ng-controller="settingsPageController as vm">
+    <form role="form">
+        <div class="form-group">
+            <label for="email">Change Email address:</label>
+            <input type="email" class="form-control" id="email" ng-model="vm.username">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Change Password:</label>
+            <input type="password" class="form-control" id="pwd" ng-model="vm.password">
+        </div>
+        <button type="submit" class="btn btn-default" ng-click="vm.submit()">Submit</button>
+    </form>
+</div>

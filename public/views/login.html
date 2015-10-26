@@ -1,0 +1,46 @@
+<div class="container" ng-controller="signupController as vm">
+
+    <div class="alert alert-danger fade in" ng-if="vm.errorMessage">
+        <a href="#" class="close" ng-click="vm.closeErrorMessage()" aria-label="close">&times;</a>
+        <strong>{{vm.errorMessage}}</strong>
+    </div>
+
+    <form role="form" class="form-horizontal" name="vm.loginOrSignupForm" novalidate>
+        <div class="form-group" ng-if="$state.is('signup')">
+            <label class="control-label col-sm-2" for="name">Name:</label>
+            <div class="col-sm-10">
+                <input type="text" class="form-control" name="name" ng-model="vm.userFormData.name" id="name"
+                       placeholder="Enter name" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" name="username" id="email" ng-model="vm.userFormData.username"
+                       placeholder="Enter email" required>
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="control-label col-sm-2" for="pwd">Password:</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" name="password" ng-model="vm.userFormData.password" id="pwd"
+                       placeholder="Enter password" required>
+            </div>
+        </div>
+        <div class="form-group" ng-if="$state.is('signup')">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" ng-click="vm.signup()">Sign up</button>
+            </div>
+        </div>
+        <div class="form-group" ng-if="$state.is('login')">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default" ng-click="vm.login()">Login</button>
+            </div>
+        </div>
+    </form>
+    <!--<div>
+        <pre>{{vm.userFormData | json}}</pre>
+    </div>-->
+
+
+</div>

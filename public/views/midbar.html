@@ -1,0 +1,8 @@
+<div class="jumbotron" ng-controller="midbarController as vm">
+    <h1 class="text-center">Vote Guru</h1>
+    <h4 class="text-center">Create custom polls</h4>
+    <div class="text-center">
+        <button ng-if="($state.is('home')) || ($state.is('login'))" type="button" ng-click="vm.signup()" class="btn btn-success text-center">Sign Up</button>
+    </div>
+
+</div>
