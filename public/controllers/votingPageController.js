@@ -9,7 +9,7 @@
         .controller('votingPageController', votingPageController);
 
 
-    function votingPageController($state, voteGuruService) {
+    function votingPageController($state, voteGuruService, votingPageService) {
 
 
         var vm = this;
@@ -19,7 +19,7 @@
         vm.submit = submit;
 
         function submit(){
-            voteGuruService.submitPolls(vm.optionSelected, vm.poll , vm.user);
+            votingPageService.submitPolls(vm.optionSelected, vm.poll , vm.user);
             //voteGuruService.updateUserWithPollVotes(vm.poll, vm.user);
             voteGuruService.updatePoll(vm.poll._id, vm.poll).success(function(data){
 
@@ -45,7 +45,3 @@
     }
 
 })();
-
-
-
-

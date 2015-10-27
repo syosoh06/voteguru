@@ -20,15 +20,15 @@
         var createNewPoll = false;
 
         var filterPollsByUsername = function(username, allPolls){
-                var len=allPolls.length;
-                var myPolls = [];
-                for(var i=0; i<len; i++){
-                    if(allPolls[i].username === username){
-                        myPolls.push(allPolls[i]);
-                    }
+            var len=allPolls.length;
+            var myPolls = [];
+            for(var i=0; i<len; i++){
+                if(allPolls[i].username === username){
+                    myPolls.push(allPolls[i]);
                 }
-                return myPolls;
-            };
+            }
+            return myPolls;
+        };
 
         var pollForVotingPage = {};
         var oldPoll = {};
@@ -40,102 +40,21 @@
 
 
         return {
-            checkIfUsernameExists: function (userFormData, data) {
-                var len = data.length;
-                for (var i = 0; i < len; i++) {
-                    if (data[i].username === userFormData.username) {
-                        this.setErrorMessage("Username already exists - Please choose a different name");
-                        return true;
-                    }
-                }
-                return false;
-            },
-            setErrorMessage: function (message) {
-                errorMessage = message;
-            },
-            getErrorMessage: function () {
-                return errorMessage;
-            },
-            validateForm: function (form) {
-                if (form.$invalid) {
 
-                    this.setErrorMessage("Please enter your details in order to proceed");
-                    return false;
-                }
-                else {
-                    return true;
-                }
-            },
-            loadBarDataForGraphs: function (data, labels) {
-                var barData = {};
-                barData.labels = labels;
-                barData.datasets = [];
-                barData.datasets[0] = {};
-                barData.datasets[0].data = data;
-                return barData;
-            },
             setNewPollFlagIfEnteringHomePage: function () {
                 if (((this.getFromState() === 'login') || (this.getFromState() === 'signup')) && (this.getToState() === 'usersHomePage')) {
                     this.setNewPollFlag(true);
                 }
             },
-            showSignup: function () {
-                if (toState === 'home' || toState === 'login') {
-                    return true;
-                }
-                else {
-                    return false;
-                }
-            },
-            showLogin: function () {
-                if (toState === 'home' || toState === 'signup') {
-                    return true;
-                }
-                else {
-                    return false;
-                }
-            },
-            showSettingsOrLogout: function () {
-                if (toState === 'home' || toState === 'signup' || toState === 'login') {
-                    return false;
-                }
-                else {
-                    return true;
-                }
-            },
-            loadGraphData: function(){
-                var data = [];
-                var poll = this.getPollForGraphs();
-                var len = poll.Options.length;
-                for(var i=0; i<len; i++){
-                    data.push(poll.Options[i].votes);
-                }
-                return data;
-            },
-            loadGraphLabels: function(){
-                var labels = [];
-                var poll = this.getPollForGraphs();
-                var len = poll.Options.length;
-                for(var i=0; i<len; i++){
-                    labels.push(poll.Options[i].option);
-                }
-                return labels;
-            },
+
+
             setPollForGraphs: function(poll){
                 pollForGraphs=poll;
             },
             getPollForGraphs: function(){
                 return pollForGraphs;
             },
-            hideDeleteButton: function (poll) {
-                var username = this.getUser().username;
-                if(poll.username === username){
-                    return false;
-                }
-                else{
-                    return true;
-                }
-            },
+
             getshowAllPollsFlag: function(){
                 return showAllPolls;
             },
@@ -166,11 +85,11 @@
             getMyPolls: function( data, username){
                 var myPolls=[];
 
-                    var allPolls = data;
+                var allPolls = data;
 
                 myPolls = filterPollsByUsername(username, allPolls);
 
-                    return myPolls;
+                return myPolls;
 
 
             },
@@ -253,7 +172,7 @@
                     }
 
                 }
-            return validation;
+                return validation;
             },
 
             createPolls: function(){
@@ -295,7 +214,7 @@
                 var obj = {};
                 obj.username = user.username;
                 obj.option = optionSelected;
-                    poll.alreadyVoted.push(obj);
+                poll.alreadyVoted.push(obj);
 
 
                 return poll;
@@ -304,53 +223,11 @@
             getSingleUser: function(id, userdata){
                 var url = ('/api/users/' + id).toString();
                 return $http.get(url, userdata);
-            },
-
-            checkIfAlreadyVoted: function(user, poll){
-                var len=poll.alreadyVoted.length;
-                for(var i=0; i<len; i++){
-                    if(poll.alreadyVoted[i].username === user.username){
-                        return true;
-                    }
-                }
-                return false;
-            },
-
-            editAlreadyVotedArray: function(poll, username){
-                var len=poll.alreadyVoted.length;
-                if(poll.alreadyVoted[len-1].username === username){
-                    poll = this.reduceVotes(poll.alreadyVoted[len-1].option, poll);
-                    poll.alreadyVoted.pop();
-                }
-                else {
-                    for(var i=0; i<len; i++){
-                        if(poll.alreadyVoted[i].username === user.username){
-                            poll.alreadyVoted[i] = poll.alreadyVoted[len-1];
-                            poll = this.reduceVotes(poll.alreadyVoted[i].option, poll);
-                            poll.alreadyVoted.pop();
-                        }
-                    }
-                }
-               return poll;
-            },
-
-            reduceVotes: function(option, poll){
-                var len= poll.Options.length;
-                for(var i=0; i<len; i++){
-                    if(option === poll.Options[i].option){
-                        poll.Options[i].votes--;
-                    }
-                }
-                return poll;
             }
+
+
+
         }
 
     }
 })();
-
-
-
-
-
-
-

@@ -9,7 +9,7 @@
         .controller('navbarController', navbarController);
 
 
-    function navbarController(voteGuruService) {
+    function navbarController(voteGuruService, navbarService) {
 
 
         var vm = this;
@@ -30,20 +30,16 @@
         }
 
         function showLogin() {
-            return voteGuruService.showLogin();
+            return navbarService.showLogin();
         }
 
         function showSignup() {
-            return voteGuruService.showSignup();
+            return navbarService.showSignup();
         }
 
         function showSettingsOrLogout() {
-            return voteGuruService.showSettingsOrLogout();
+            return navbarService.showSettingsOrLogout();
         }
     }
 
 })();
-
-
-
-

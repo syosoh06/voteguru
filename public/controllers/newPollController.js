@@ -9,7 +9,7 @@
         .controller('newPollController', newPollController);
 
 
-    function newPollController($state, voteGuruService, $rootScope) {
+    function newPollController($state, voteGuruService, $rootScope, newPollService) {
 
 
         var vm = this;
@@ -30,7 +30,7 @@
 
 
         function deleteOption(index){
-            voteGuruService.deleteOption(vm.selectedPoll.Options, index);
+            newPollService.deleteOption(vm.selectedPoll.Options, index);
         }
 
 
@@ -48,15 +48,15 @@
         }
 
         function addMoreOptions(){
-            voteGuruService.addOneMoreOption(vm.selectedPoll);
+            newPollService.addOneMoreOption(vm.selectedPoll);
         }
 
         function addPolls(){
             vm.selectedPoll.username = voteGuruService.getUser().username;
-                voteGuruService.addPoll(vm.selectedPoll).success(function(data){
-                    voteGuruService.setPollForVotingPage(data.pollAdded);
+            voteGuruService.addPoll(vm.selectedPoll).success(function(data){
+                voteGuruService.setPollForVotingPage(data.pollAdded);
                 voteGuruService.setPollToBeRetrievedInNewPollsPage({});
-                    voteGuruService.setNewPollFlag(false);
+                voteGuruService.setNewPollFlag(false);
                 vm.selectedPoll = {};
                 $state.go('votingPage');
             });

@@ -6,7 +6,7 @@
         .controller('signupController', signupController);
 
 
-    function signupController($state, voteGuruService) {
+    function signupController($state, voteGuruService, signupService) {
 
 
         var vm = this;
@@ -30,16 +30,16 @@
 
         function login(){
 
-            if (voteGuruService.validateForm(vm.loginOrSignupForm) === true) {
+            if (signupService.validateForm(vm.loginOrSignupForm) === true) {
                 voteGuruService.get().success(function (data) {
                     console.log('list of users', data);
-                    var validation = voteGuruService.validate(vm.userFormData, data);
+                    var validation = signupService.validate(vm.userFormData, data);
                     //voteGuruService.setUser(data.user);
                     changeState(validation);
                 })
             }
             else {
-                vm.errorMessage = voteGuruService.getErrorMessage();
+                vm.errorMessage = signupService.getErrorMessage();
             }
 
         }
@@ -57,11 +57,11 @@
 
         function signup(){
 
-            if (voteGuruService.validateForm(vm.loginOrSignupForm) === true) {
+            if (signupService.validateForm(vm.loginOrSignupForm) === true) {
                 checkUserName();
             }
             else {
-                vm.errorMessage = voteGuruService.getErrorMessage();
+                vm.errorMessage = signupService.getErrorMessage();
             }
 
         }
@@ -69,9 +69,9 @@
         function checkUserName() {
             voteGuruService.get().success(function (data) {
                 console.log('list of users', data);
-                var usernameExists = voteGuruService.checkIfUsernameExists(vm.userFormData, data);
+                var usernameExists = signupService.checkIfUsernameExists(vm.userFormData, data);
                 if (usernameExists === true) {
-                    vm.errorMessage = voteGuruService.getErrorMessage();
+                    vm.errorMessage = signupService.getErrorMessage();
                 }
                 else {
                     addUser();
@@ -92,7 +92,3 @@
     }
 
 })(); 
-
-
-
-

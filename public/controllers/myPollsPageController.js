@@ -9,7 +9,7 @@
         .controller('myPollsPageController', myPollsPageController);
 
 
-    function myPollsPageController($state, voteGuruService, $rootScope) {
+    function myPollsPageController($state, voteGuruService, $rootScope, myPollsPageService) {
 
 
         var vm = this;
@@ -27,14 +27,14 @@
         vm.closeDuplicateVoteModal=closeDuplicateVoteModal;
 
         function voteAgain(){
-           var poll = voteGuruService.editAlreadyVotedArray(vm.pollToBeVoted, vm.user.username);
+            var poll = myPollsPageService.editAlreadyVotedArray(vm.pollToBeVoted, vm.user.username);
             //vote(poll);
             goToVotingPage(poll);
             closeDuplicateVoteModal();
         }
 
         function closeDuplicateVoteModal(){
-           vm.displayModalFlag = false;
+            vm.displayModalFlag = false;
         }
 
 
@@ -46,7 +46,7 @@
 
         function vote(poll){
             vm.pollToBeVoted = poll;
-             vm.displayModalFlag = voteGuruService.checkIfAlreadyVoted(vm.user, poll);
+            vm.displayModalFlag = myPollsPageService.checkIfAlreadyVoted(vm.user, poll);
             if(vm.displayModalFlag === false){
                 goToVotingPage(poll);
             }
@@ -70,7 +70,7 @@
         });
 
         function hideDeleteButton(poll){
-            return voteGuruService.hideDeleteButton(poll);
+            return myPollsPageService.hideDeleteButton(poll);
         }
 
         function showAllPolls(){
