@@ -1,4 +1,4 @@
-You can see the app here - https://voteguru.herokuapp.com/#/home
+You can see the app here - https://voteguru.herokuapp.com
 
 # voteguru
 a simple voting application
